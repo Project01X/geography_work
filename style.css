@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    
+    outline: none;
 }
 
 body {
     display: grid;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ---- HEADER ---- */
@@ -21,7 +23,7 @@ body {
     width: 100%;
     background-color: #111;
     position: fixed;
-    opacity: 0.94;
+    opacity: 0.96;
     z-index: 3;
 }
 
@@ -41,6 +43,10 @@ body {
 #img-logo {
     width: 50px;
     height: 50px;
+}
+
+#div-logo p {
+    margin: auto;
 }
 
 #nav-content {
@@ -100,13 +106,40 @@ video {
     flex-direction: column;
 }
 
+#test {
+    font-size: 16px;
+}
+
 #name-game {
     color: #f9f9f9;
     margin-bottom: 40px;
-    font-size: larger;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 1000px;
+    font-size: 9.5em;
     font-weight: 600;
-    font-size: 10vw;
+    animation: typewriter 2s steps(13) infinite alternate,
+          blink 800ms steps(13) infinite normal;
+    border-right: 5px solid rgb(136, 136, 136);
 }
+
+@keyframes typewriter {
+    from {
+      width: 25%;
+    }
+    to {
+      width: 108%;
+    }
+}
+@keyframes blink {
+    from {
+      border-color: rgb(136, 136, 136);
+    }
+    to {
+      border-color: transparent;
+    }
+} 
+
 
 #download {
     display: flex;
@@ -118,15 +151,14 @@ video {
     opacity: 0.8;
     color: #111;
     font-family: Cabin, sans-serif;
-    font-size: larger;
     color: #f9f9f9;
-    width: 40%;
-    height: 6vw;
-    font-size: 4vw;
+    padding:  0 40px;
+    font-size: 3.125em;
     cursor: pointer;
     transition-property: background-color;
     transition-duration: 0.3s;
 }
+
 
 #download:hover {
     background-color: #98FB98;
@@ -217,11 +249,9 @@ img.creators-img {
     width: 50%;
     margin-top: 40px;
 }
-
 #contact-form {
     display: flex;
 }
-
 .contact-img {
     width: 100px;
 } */
@@ -229,6 +259,14 @@ img.creators-img {
 @media (max-width: 1199px) {
     img.creators-img {
         width: 140px;
+    }
+
+    #test {
+        font-size: 12px;
+    }
+    
+    #div-download {
+        font-size: 13px;
     }
     
     .creators {
@@ -241,6 +279,12 @@ img.creators-img {
         width: 100px;
     }
 
+    #test {
+        font-size: 10px;
+    }
+
+    
+
     .creators {
         font-size: 14px;
     }
@@ -251,12 +295,21 @@ img.creators-img {
         width: 140px;
     }
 
-    
+}
+
+@media (max-width: 648px) {
+    #test {
+        font-size: 7.7px;
+    }
 }
 
 @media (max-width: 508px) {
     #section2 {
         height: 500px;
+    }
+
+    #test {
+        font-size: 6px;
     }
 }
 
@@ -270,6 +323,27 @@ img.creators-img {
     }
 }
 
+@media (max-width: 425px) {
+    
+    #test {
+        font-size: 5px
+    }
+    
+    #div-download {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 360px) {
+    #test {
+        font-size: 4.1px
+    }
+    
+    #div-download {
+        font-size: 7px;
+    }
+}
+
 @media (max-width: 353px) {
     img.creators-img {
         width: 140px;
@@ -279,6 +353,18 @@ img.creators-img {
         font-size: 15px;
     }
 
+    #section2 {
+        height: 600px;
+    }
+}
+
+@media (max-width: 378px) {
+    #section2 {
+        height: 550px;
+    }
+}
+
+@media (max-width: 330px) {
     #section2 {
         height: 600px;
     }
